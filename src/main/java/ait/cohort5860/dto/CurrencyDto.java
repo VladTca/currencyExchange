@@ -2,61 +2,13 @@ package ait.cohort5860.dto;
 
 import java.util.Map;
 
-public class CurrencyDto {
-    private boolean success;
-    private long timestamp;
-    private String base;
-    private String date;
-    private Map<String, Double> rates;
-
-
-    public boolean isSuccess() {
-        return success;
-    }
-
-    public void setSuccess(boolean success) {
-        this.success = success;
-    }
-
-    public long getTimestamp() {
-        return timestamp;
-    }
-
-    public void setTimestamp(long timestamp) {
-        this.timestamp = timestamp;
-    }
-
-    public String getBase() {
-        return base;
-    }
-
-    public void setBase(String base) {
-        this.base = base;
-    }
-    public String getDate() {
-        return date;
-    }
-
-    public void setDate(String date) {
-        this.date = date;
-    }
-
-    public Map<String, Double> getRates() {
-        return rates;
-    }
-
-    public void setRates(Map<String, Double> rates) {
-        this.rates = rates;
-    }
-
-
-    @Override
-    public String toString() {
-        return "CurrencyDto{" +
-                "success=" + success +
-                ", base='" + base + '\'' +
-                ", date='" + date + '\'' +
-                '}';
-    }
-
+public record CurrencyDto(
+        boolean success,
+        long timestamp,
+        String base,
+        String date,
+        Map<String, Double> rates
+) {
 }
+
+

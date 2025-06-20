@@ -34,7 +34,7 @@ public class CurrencyExchangeController {
             throw new RuntimeException("HTTP error while accessing Fixer.io API.", e);
         }
 
-        Double rate = response.getRates().get(toCurrency.toUpperCase());
+        Double rate = response.rates().get(toCurrency.toUpperCase());
         if (rate == null) {
             throw new RuntimeException("Exchange rate for " + toCurrency + " not found.");
         }
